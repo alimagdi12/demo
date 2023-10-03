@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Login</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: MyResume
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+       
+</head>
+<body>
+    
+   <!-- ======= Hero Section ======= -->
+   <section id="hero2" class="d-flex flex-column justify-content-center" 
+   style="  background: url('./assets/img/222.png') top right no-repeat;
+    background-size: cover;
+  position: relative;
+   ">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1><%= userName %></h1>
+      <!-- <p>Welcome&nbsp;<span class="typed" data-typed-items=" Khorfakkan Sports  Club "></span></p> -->
+      <div class="social-links">
+      </div> 
+      
+    </div>
+
+
+  </section><!-- End Hero -->
+
+
+
+
+
+
+  </header><!-- End Header --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    .card
+{
+    border: 1px solid rgba(136, 125, 125, 0.623) ;
+    width: 100%;
+    height: auto; 
+    border-radius: 50px; 
+    text-align: center;
+    margin-top: 100px;
+    background-color: none ;
+    margin: auto;
+
+}
+
+.label
+{
+    
+    font-size: 22px;
+    padding: 10px;
+
+}
+
+.input2
+{
+    
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding:  3px;
+}
+
+.input
+{
+    margin-top: 50px;
+    width: 400px;
+    margin: auto;
+    
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding: 12px;
+
+}
+
+.btt
+{
+    margin-top: 40px ;
+    width: 300px;
+    height: 30px;
+    border-radius: 50px;
+    border: none ;
+    background-color: grey ;
+    color: white;
+    margin-bottom: 20px;
+}
+</style>
+
+
+
+
+
+<section id="login" >
+<div >
+
+
+<div >
+
+<div class="card">
+
+<h1 style="font-size: 50px; color: black; margin-top: 40px;"> Add Player  </h1>
+
+<form action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST" class="form">
+
+
+<label for="UserName" class="label">First  Name </label> 
+
+<input type="text" placeholder="احـمد " name="firstName" id="title" value="<% if (editing) { %><%= product.firstName %><% } %>" required class="input">
+
+
+
+<label for="text" class="label"  > Surname  </label> 
+
+
+<input type="text" placeholder=" عبدالـرحمن" name="lastName"  value="<% if (editing) { %><%= product.lastName %><% } %>" required class="input">
+
+
+<br>
+<br>
+
+
+<label for="text" class="label"  > Name In English   </label> 
+
+<input type="text" placeholder="  Ahemd Abdl Elrahman" name="englishName" value="<% if (editing) { %><%= product.englishName %><% } %>" required class="input">
+
+
+
+<label for="Date" class="label"> Date OF Birth     </label>  
+<input style=" text-align: center;"type="date" placeholder="25-10-1998" name="birthDate" value="<% if (editing) { %><%= product.birthDate %><% } %>" required class="input">
+
+
+
+
+
+<br>
+<br>               
+
+
+
+
+<label for="text" class="label"  > Passport Number   </label>  
+<input style=" text-align: center;"
+type="text" placeholder="12345678910" name="passportNumber" value="<% if (editing) { %><%= product.passportNumber %><% } %>" required class="input">
+
+
+<label for="Date" class="label"> Issue Date      </label>  
+<input style=" text-align: center;"
+type="date" placeholder="25-10-1998" name="issueDate" value="<% if (editing) { %><%= product.issueDate %><% } %>"required class="input">
+
+
+
+<br>
+<br>
+
+
+<label for="Date" class="label"> Nationality      </label>  
+<input style=" text-align: center;"
+type="text" placeholder="Egyption " name="nationality" value="<% if (editing) { %><%= product.nationality %><% } %>" required class="input">
+
+
+<br>
+<br>
+
+
+
+<label for="number" class="label"  > Age   </label>  
+<input style="width: 50px; text-align: center;"
+type="number" placeholder="25" name="age" value="<% if (editing) { %><%= product.age %><% } %>" required class="input2">
+
+
+
+<label for="" class="label">Gender </label>
+<select name="gender" value="<% if (editing) { %><%= product.gender %><% } %>" id="" style="width: 100px; border-radius: 40px;border: 1px solid rgba(136, 125, 125, 0.623) ;
+    border: 1px solid rgba(136, 125, 125, 0.623) ; height: 30px;"> 
+<option value="male">Male </option>
+<option value="female"> Female </option>
+</select>
+
+
+<br>
+
+
+<% if (editing) { %>
+    <input type="hidden" value="<%= product._id %>" name="productId">
+<% } %>
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+<button class="btt" type="submit"><% if (editing) { %>Update Player<% } else { %>Add Player<% } %></button>
+
+
+</form>
+</div>
+
+
+</div>
+
+</div>
+</section><!-- End Contact Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+    <div class="container">
+      <h3> UAE Judo Federation </h3>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>&</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        Designed by <a href="https://bootstrapmade.com/">A&M SoftSolutions</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

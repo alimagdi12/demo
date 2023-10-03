@@ -1,0 +1,749 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MyResume Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Events</span></a></li>
+        <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Clubs</span></a></li>
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="./login.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>login</span></a></li>
+
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Judo  Federation</h1>
+      <p>Welcome to &nbsp;<span class="typed" data-typed-items=" UAE Judo Federation"></span></p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div> 
+      <!-- <div style=" height: 20px ;  width: 400px ;  margin-top: 40px;">
+        <button type="submit"  style=" height: 50px ;  width: 200px ; background-color: cornflowerblue;color: white ;
+          border: none ; "><a href="./login.html" style="color: white;">Login</a> </button></div>
+
+      
+    </div> -->
+<!-- ======= login Section ======= -->
+
+
+<style>
+    .card
+                        {
+                            border: 1px solid rgba(136, 125, 125, 0.623) ;
+                            width: 400px;
+                            height: 400px;
+                            border-radius: 50px; 
+                            text-align: center;
+                            background-color: none ;
+                
+                        }
+                
+                        .label
+                        {
+                            font-weight: bold;
+                            font-size: 24px;
+                            margin-top: 10px;
+                
+                            
+                        
+                        }
+                
+                        .input
+                        {
+                            width: 300px;
+                            margin-top: 10px;
+                            height: 40px;
+                            display: inline-block;
+                            border: 3px solid #ccc;
+                            border-radius: 60px;
+                            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                            font-weight: bold;
+                            padding: 12px 20px;
+                
+                        }
+                
+                        .btt
+                        {
+                            margin-top: 40px ;
+                            width: 300px;
+                            height: 30px;
+                            border-radius: 50px;
+                            border: none ;
+                            background-color: cornflowerblue;
+                            color: white;
+                        }
+</style>
+
+
+
+
+
+<section id="login" >
+  <div >
+
+    
+    <div >
+
+      <div class="card">
+                
+        <h1 style="font-size: 50px; color: cornflowerblue; margin-top: 40px;"> Signup Form  </h1>
+        <% if (errorMessage) { %>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %>
+        
+        <form action="/signup" method="POST" class="form">
+
+            <label for="UserName" class="label">Club Name </label> <br>
+            <select name="userName" style="border: 1px solid gray; border-radius: 20px;width: 75%;
+            height: 35px;">
+                <option value="Khorfakkan">Khorfakkan</option>
+                <option value="alahly">Alahy</option>
+                <option value="alzamalek">alzamalek</option>
+            </select><br>
+
+
+                <label for="UserName" class="label">Email </label> <br>
+                <input type="text" placeholder="Enter Email" name="email" required class="input">
+
+                <label for="password" class="label"  style="margin-top: 20px;"> Password </label>             
+                <input type="password" placeholder="Enter Password" name="password" required class="input">
+
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btt" type="submit"> Submit</button>
+
+
+        </form>
+    </div>
+      
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>The 'UAE Judo Federation' (UAEJF) was originally formed as the UAE Wrestling and Judo Federation in 1999.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets/img/22.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>UAE Judo  Federation</h3>
+            <p >
+              Overtime, the establishment developed exceptional specializations in Judo and was realigned to focus purely on the promotion of Judo.
+            </p>
+            <!-- <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div> -->
+            <p>
+              The establishment was conceived as a result of the decision of the UAE General Authority for Sports and Youth. UAEJF strives to meet the region’s need for infrastructure development, and the local sports community in UAE. We are here to contribute to the building of generations of conscious and responsible young people - 
+              so that they may play their part in building and developing the United Arab Emirates.
+            </p>
+
+            <p>
+              We work with a large number of prestigious national sponsors and international associations to create opportunities, develop infrastructure, promote physical fitness, and meet the region’s need for a strong local sports community in the UAE.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <!-- <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Facts Section -->
+
+  
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Calendar of Competitions & Events for Judo 2022-2023</h2>
+          <p>The UAEJF is home to some of the most significant Judo events in the UAE. These are presided by royal members of the region's leadership.
+
+          </p>
+                 </div>
+
+        <div class="row">
+      <div class="col-lg-6" style="width: 100%;">
+ 
+ <table >
+   <tr style=" background-color: darkgreen ; color: white ; ">
+     <th class="th1" >#</th>
+     <th>Date</th>
+     <th>Event</th>
+     <th>Category</th>
+     <th>Place </th>
+   </tr>
+   <tr>
+     <td  class="th1" >1</td>
+     <td>03-04/09/2022</td>
+     <td>Arbitration Tournament</td>
+     <td>Referees</td>
+     <td>Fujairah</td>
+     
+   </tr>
+   
+   <tr> 
+     <td  class="th1">2</td>
+     <td>17/09/2022	</td>
+     <td>Federation Cup	</td>
+      <td>Shoots - young		</td>
+      <td> Sharjah </td>
+   </tr>
+   
+   <tr>
+     <td  class="th1">3</td>
+     <td>24/09/2022	</td>
+     <td>EMT course	</td>
+     <td>Player - coach - administrator	</td>
+     <td>Sharjah</td>
+   </tr>
+   
+   <tr>
+     <td  class="th1">4</td>
+     <td>20-23/10/2022	</td>
+     <td>Grand Slam	</td>
+     <td>Men	</td>
+     <td>Abu Dhabi</td>
+   </tr>
+   
+   
+   <tr>
+     <td class="th1">5</td>
+     <td>12/11/2022	</td>
+     <td>Championship of the Japanese ambassador	</td>
+     <td>Junior - Kata	</td>
+     <td>Abu Dhabi</td>
+ 
+ 
+   </tr>
+   <tr>
+     <td class="th1">6</td>
+     <td>26/11/2022	 </td>
+     <td>National Championship Day	</td>
+     <td>Shoots - juniors - guys	</td>
+     <td>Khorfakkan</td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1">7</td>
+     <td>24/12/2022		 </td>
+     <td>Training camp		</td>
+     <td>juniors - youth		</td>
+     <td>Fujairah</td>
+ 
+   </tr>
+   
+   
+   <tr>
+     <td class="th1">8</td>
+     <td>2023/01/23	 </td>
+     <td>Kata Championship and Junior Festival</td>
+     <td>juniors - youth</td>
+     <td>Sharjah <td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1">9</td>
+     <td>28/01/2023	</td>
+     <td>Kata course</td>
+     <td>player - coach	</td>
+     <td>Fujairah <td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1"> 10 </td>
+     <td>04/02/2023 </td>
+     <td>Check belts</td>
+     <td>player-coach	</td>
+     <td>Fujairah <td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1">11</td>
+     <td>11/02/2023	</td>
+     <td>Single league</td>
+     <td>juniors</td>
+     <td>Sharjah <td>
+ 
+   </tr>
+   
+   
+   
+    <tr>
+     <td class="th1">12</td>
+     <td>25/02/2023	</td>
+     <td> Emirates Championship</td>
+     <td>Shoots - Youth	</td>
+     <td>Fujairah <td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1">13</td>
+     <td>04/03/2023</td>
+     <td>Emirates Championship</td>
+     <td>juniors - men</td>
+     <td>Sharjah <td>
+ 
+   </tr>
+   
+   
+   
+    <tr>
+     <td class="th1">14</td>
+     <td>01/04/2023</td>
+     <td>Ramadan Tournament	</td>
+     <td>Young people - young people</td>
+     <td>Fujairah<td>
+ 
+   </tr>
+   
+   
+    <tr>
+     <td class="th1">15</td>
+     <td>06/05/2023		 </td>
+     <td>SinReferees course	</td>
+     <td>Shoots - youth	</td>
+     <td>Sharjah<td>
+ 
+   </tr>
+   
+   
+   
+    <tr>
+     <td class="th1">16</td>
+     <td>20/05/2023	</td>
+     <td>Championship of His Highness the President of the State</td>
+     <td>Cubs - guys	</td>
+     <td>Abu Dhabi <td>
+ 
+   </tr>
+   
+</table>
+
+ </div>
+
+            
+   </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+    <style>
+      table {
+       font-family: arial, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+     }
+     
+     td, th { 
+       border: 1px solid #dddddd;
+       text-align: left;
+  
+     }
+     
+     tr:nth-child(even) {
+       background-color: #dddddd;
+     }
+     
+     .th1
+     {
+     
+       width:5px ; 
+         
+         
+        } 
+     </style>
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Clubs</h2>
+          <p>UAE-JF is home to the region's top Judo and martial arts clubs</p>
+        </div>
+
+        <div class="row">
+
+
+                      <!-- ------------------ Khorfkan ------------------- -->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div >
+                <img   width="200" height="200"  src="./assets/img/Clubs/khorf.webp">
+                </img>
+                
+              </div>
+              <h4><a href="">Khorfakkan Sports & Culutral Club</a></h4>
+              <p><span style=" font-weight: bold;" > Email :</span>khor@khorfakkanclub.ae</p>
+              <p><span style=" font-weight: bold;">Landline	:</span> 9719231888</p>
+              <p><span style=" font-weight: bold;">Fax :</span>97192371661</p> 
+              <p><span style=" font-weight: bold;">Website :</span>	www.shjsdsc.ae</p> 
+              <p><span style=" font-weight: bold;">Address :</span>	Khorfakkan - Sharjah - UAE</p> 
+              <p><span style=" font-weight: bold;">Training :</span> Saturday to Thursday from 14:30 to 22:00</p> 
+        
+            </div>
+          </div>
+
+  <!-- ------------------------ sharqa ---------------------------- -->
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div >
+                <img width="150" height="150" viewBox="0 0 600 600" src="./assets/img/Clubs/sharqa.png">
+                </img>
+              </div>
+              <h4><a href="">Sharjah Sports Club</a></h4>
+              <p><span style="font-weight: bold;">Email :</span>   Ind.games@shjclub.ae</p>
+              <p><span  style="font-weight: bold;">Landline	: </span>  +97165226600</p>
+              <p><span style="font-weight: bold;">Fax :</span>	+97165243274</p> 
+              <p><span style="font-weight: bold;">Website :</span>	www.sharjahclub.ae</p> 
+              <p><span style="font-weight: bold;" >Address :</span>	Sharjah-Uae-Alhazzanah</p> 
+              <p> <span style="font-weight: bold;">Training :</span> Times	5:00PM-7:00PM</p>
+
+
+            </div>
+          </div>
+
+
+
+<!-- --------------------------- team --------------------------------------- -->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div >
+                <img  width="200" height="200" viewBox="0 0 600 600" src="./assets/img/Clubs/team.png">
+                </img>
+              </div>
+              <h4><a href="">TEAM NOGUEIRA DUBAI
+              </a></h4>
+              <p><span style="font-weight: bold;">Email :</span>   info@teamnogueiradubai.com</p>
+              <p><span  style="font-weight: bold;">Landline	: </span>  +9714 338 8967</p>
+              <p><span style="font-weight: bold;">Mobile :</span>	+97155 269 7159  Luc Ntsama – Head Coach Judo</p> 
+              <p><span style="font-weight: bold;">Website :</span>	www.teamnogueiradubai.com</p> 
+              <p><span style="font-weight: bold;" >Address :</span>	Al Quoz 3, 4th street, Al Ghurair Warehouse, Behind Audi showroom, Dubai</p> 
+              <p> <span style="font-weight: bold;">Training :</span> Kids & Youth – Monday to Friday - 4:00pm to 6:00pm Adults – Tuesday, Thursday 8:30pm and Saturday 12:30pm Ladies – Monday, Wednesday 9:00am</p>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div >
+                <img width="200" height="200" viewBox="0 0 600 600" src="./assets/img/Clubs/sharjah.png">
+                </img>
+              </div>
+              <h4><a href="">Sharjah Sports Club</a></h4>
+              <p><span style="font-weight: bold;">Email :</span>  info@shjsdsc.ae</p>
+              <p><span  style="font-weight: bold;">Landline	: </span>  	065566017</p>
+              <p><span style="font-weight: bold;">Fax :</span>		065566024</p> 
+              <p><span style="font-weight: bold;">Website :</span>		www.shjsdsc.ae</p> 
+              <p><span style="font-weight: bold;" >Address :</span>		aljazzat - sharjah</p> 
+              <p> <span style="font-weight: bold;">Training :</span> 	الأحد - الثلاثاء - الخميس</p>
+
+
+            </div>
+          </div>
+
+
+          <!-- -------------------------- Kalba --------------- -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <div >
+                <img width="150" height="150" viewBox="0 0 600 600" src="./assets/img/Clubs/kalba.png">
+                </img>
+              </div>
+              <h4><a href="">Kalba Sports Club</a></h4>
+              <p><span style="font-weight: bold;">Email :</span> info1@ittihadkalbasc.ae</p>
+              <p><span  style="font-weight: bold;">Landline	: </span>  	092777873</p>
+              <p><span style="font-weight: bold;">Fax :</span>	092777211</p> 
+              <p><span style="font-weight: bold;">Website :</span>	www.ittihadkalbasc.ae</p> 
+              <p><span style="font-weight: bold;" >Address :</span>Kalba-sharjah-U.A.E</p> 
+              <p> <span style="font-weight: bold;">Training :</span> 05:00PM-07:30PM</p>       
+                 </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <div >
+                <img width="150" height="150" viewBox="0 0 600 600" src="./assets/img/Clubs/Fujairah.webp">
+                </img>
+              </div>
+              <h4><a href="">Fujairah Martial Arts Club</a></h4>
+              <p><span style="font-weight: bold;">Email :</span> fujairah.ma@gmail.com</p>
+              <p><span  style="font-weight: bold;">Landline	: </span>  +97192234447</p>
+              <p><span style="font-weight: bold;">Fax :</span>	+97192234474</p> 
+              <p><span style="font-weight: bold;">Website :</span>	www.fmac.ae</p> 
+              <p><span style="font-weight: bold;" >Address :</span>Fujairah-U.A.E</p> 
+              <p> <span style="font-weight: bold;">Training :</span> 1:00PM-3:00PM</p>            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+  <div class="container">
+    <h3> UAE Judo Federation </h3>
+    <div class="social-links">
+      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; Copyright <strong><span>&</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: [license-url] -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+      Designed by <a href="https://bootstrapmade.com/">A&M SoftSolutions</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
