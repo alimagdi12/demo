@@ -44,7 +44,8 @@ exports.getIndex = (req, res, next) => {
         prods: products,
         pageTitle: 'Shop',
         path: '/',
-        errorMessage: message
+        errorMessage: message,
+        userName:req.session.userName
       });
     })
     .catch(err => {

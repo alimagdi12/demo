@@ -61,7 +61,12 @@
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Clubs</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         <li><a href="./login.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>login</span></a></li>
-
+        <% if (isAuthenticated) { %>
+          <li><a class="nav-link scrollto"><i class="bx bx-user"></i> <span><form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit" style="background-color: transparent;color: white;border: none;">Logout</button>
+        </form></span></a></li>
+          <%}%>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -78,6 +83,7 @@
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        
       </div> 
       <!-- <div style=" height: 20px ;  width: 400px ;  margin-top: 40px;">
         <button type="submit"  style=" height: 50px ;  width: 200px ; background-color: cornflowerblue;color: white ;
