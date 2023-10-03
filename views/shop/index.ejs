@@ -139,6 +139,7 @@
 
 
 
+<% if (!isAuthenticated) { %>
 
 <section id="login" >
   <div >
@@ -147,11 +148,11 @@
     <div >
 
       <div class="card">
-        <% if (!isAuthenticated) { %>      
         <h1 style="font-size: 50px; color: cornflowerblue; margin-top: 40px;"> Login Form  </h1>
-        <%}%>
+        
+
+
         <form action="/login" method="POST" class="form">
-          <% if (!isAuthenticated) { %>
 
                 <label for="UserName" class="label">Email </label> <br>
                 <input type="text" placeholder="Enter Username" name="email" required class="input">
@@ -161,9 +162,8 @@
 
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button class="btt" type="submit"> Submit</button>
-          <%}else{%>
-          <h1 style="margin: 30% 0 ;">hello <%= userName%></h1>
-<% } %>
+                
+
         </form>
     </div>
       
@@ -172,6 +172,7 @@
 
   </div>
 </section><!-- End Contact Section -->
+<%}%>
 
 
   </section><!-- End Hero -->

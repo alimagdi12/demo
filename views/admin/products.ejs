@@ -32,9 +32,13 @@ style="  background: url('/css/img/222.png') top right no-repeat;
   position: relative;
 ">
 
-    <div class="container" >
-      <h1><%= userName %></h1>
-      <p>Welcome&nbsp;<span class="typed" data-typed-items="  "></span>  <%= userName %></p>
+    <div class="container"  style="position: relative;">
+      <h1 style="position: absolute ; left: 0 ; 
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #45505b;"
+      ><%= userName %></h1>
       <div class="social-links">
       </div> 
       
@@ -54,7 +58,9 @@ style="  background: url('/css/img/222.png') top right no-repeat;
                     <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
                     <li><a href="/admin/products" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Data</span></a></li>
                     <li><a href="/admin/add-product" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Add Data</span></a></li>
+                    <% if (!isAuthenticated) { %>
                     <li><a href="/signup" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Sign Up</span></a></li>
+                    <%}%>
                     <% if (isAuthenticated) { %>
                       <li><a class="nav-link scrollto"><i class="bx bx-user"></i> <span><form action="/logout" method="post">
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
